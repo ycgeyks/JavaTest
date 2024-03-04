@@ -30,8 +30,16 @@ public class Main {
         Parent.staticMethod(); // 输出：Static method in Parent class
         Child.staticMethod();  // 输出：Static method in Child class
 
+
+
         Parent parent = new Parent();
         Child child = new Child();
+        synchronized (Main.class){
+            System.out.println("ssssss");
+            System.out.println("ssssss");
+            System.out.println("ssssss");
+        }
+
         parent.staticMethod(); // 输出：Static method in Parent class
         child.staticMethod();  // 输出：Static method in Parent class
         Parent parent2=(Parent) child;
@@ -46,6 +54,8 @@ public class Main {
 
         System.out.println(child.hashCode()+"========="+Integer.toHexString(child.hashCode())+"======"+child.toString());
 
-
     }
+
+
 }
+
